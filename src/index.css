@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #05070A;
+  --color-accent: #00D2FF;
+}
+
+:root {
+  background-color: #05070A;
+  color: white;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+section, footer {
+  /* لضمان عدم اختفاء العنوان تحت الـ Nav الثابت */
+  scroll-margin-top: 100px;
+}

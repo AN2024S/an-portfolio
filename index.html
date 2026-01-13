@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/na.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>an-portfolio</title>
+
+    <style>
+      /* إخفاء شريط التمرير للمتصفحات التي تستخدم Webkit مثل Chrome و Safari */
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* إخفاء شريط التمرير لمتصفحات IE و Edge و Firefox */
+      .custom-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
