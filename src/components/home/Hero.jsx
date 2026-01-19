@@ -18,8 +18,12 @@ const Hero = ({ darkMode, t, lang }) => {
           />
         </div>
 
-        {/* الاسم - نجعله مرناً ليدعم العربية والإنجليزية */}
-        <h2 className="text-5xl md:text-8xl font-black mb-10 tracking-tighter">
+        {/* الاسم: نستخدم الخط الفني للعربية مع زيادة الحجم قليلاً للجمالية */}
+        <h2 className={`mb-10 tracking-tighter leading-tight ${
+          lang === 'ar' 
+            ? 'arabic-calligraphy text-6xl md:text-9xl' 
+            : 'text-5xl md:text-8xl font-black'
+        }`}>
           {lang === 'ar' ? (
             <>عبدالله <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400 italic">نديـش</span></>
           ) : (
@@ -27,8 +31,10 @@ const Hero = ({ darkMode, t, lang }) => {
           )}
         </h2>
 
-        {/* الوصف المترجم */}
-        <p className={`max-w-3xl mx-auto text-lg md:text-2xl mb-28 leading-relaxed italic ${darkMode ? 'text-slate-200' : 'text-slate-900'}`}>
+        {/* الوصف: نستخدم الوزن المتوسط من خط Tajawal لسهولة القراءة */}
+        <p className={`max-w-3xl mx-auto text-lg md:text-2xl mb-20 leading-relaxed font-medium ${
+          darkMode ? 'text-slate-200' : 'text-slate-900'
+        }`}>
           {t.sub}
         </p>
 
@@ -36,7 +42,7 @@ const Hero = ({ darkMode, t, lang }) => {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
           <a 
             href="#projects" 
-            className="w-full sm:w-auto px-10 py-5 bg-accent text-primary font-bold rounded-2xl shadow-xl shadow-accent/20 transition-transform hover:scale-105"
+            className="w-full sm:w-auto px-10 py-5 bg-accent text-primary font-bold rounded-2xl shadow-xl shadow-accent/20 transition-transform hover:scale-105 active:scale-95"
           >
             {t.viewWork}
           </a>
@@ -44,8 +50,10 @@ const Hero = ({ darkMode, t, lang }) => {
           <a 
             href="/cv.pdf" 
             download 
-            className={`w-full sm:w-auto px-10 py-5 flex items-center justify-center gap-3 font-bold rounded-2xl border transition-all hover:bg-accent/10 ${
-              darkMode ? 'bg-white/5 border-accent text-white' : 'bg-white border-slate-400 text-slate-900'
+            className={`w-full sm:w-auto px-10 py-5 flex items-center justify-center gap-3 font-bold rounded-2xl border-2 transition-all hover:bg-accent/10 active:scale-95 ${
+              darkMode 
+                ? 'bg-white/5 border-accent text-white' 
+                : 'bg-white border-slate-300 text-slate-900'
             }`}
           >
             {t.cvBtn}

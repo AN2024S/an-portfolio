@@ -9,7 +9,25 @@
     
     <title>Abdullah Nadeesh | Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Aref+Ruqaa:wght@700&display=swap" rel="stylesheet">
+
     <style>
+      /* الخط الافتراضي للموقع ليكون عصرياً واحترافياً */
+      :root {
+        font-family: 'Tajawal', sans-serif;
+      }
+
+      /* الكلاس الخاص بالاسم (الخط الفني) */
+      .arabic-calligraphy {
+        font-family: 'Aref Ruqaa', serif !important;
+        /* إضافة لمسة خفيفة لتحسين ظهور الخط الكبير */
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+
       /* إخفاء شريط التمرير للمتصفحات */
       body::-webkit-scrollbar {
         display: none;
@@ -17,8 +35,9 @@
       body {
         -ms-overflow-style: none;
         scrollbar-width: none;
-        /* منع ظهور مساحات بيضاء عند السحب في الجوال */
         overscroll-behavior-y: none;
+        /* ضمان تطبيق الخط على كامل الجسم */
+        font-family: 'Tajawal', sans-serif;
       }
 
       .custom-scrollbar::-webkit-scrollbar {

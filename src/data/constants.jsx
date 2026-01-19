@@ -34,7 +34,7 @@ export const translations = {
       title: "لنحول فكرتك إلى واقع!",
       phone: "الهاتف",
       telegram: "تليجرام",
-      email: "البريد الإلكتروني",
+      email: "الايميل",
       whatsapp: "واتساب"
     }
   },
