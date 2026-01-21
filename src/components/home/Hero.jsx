@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Hero = ({ darkMode, t, lang }) => {
   return (
     // تقليل pt-40 إلى pt-24 في الجوال و pb-32 إلى pb-16 لرفع المحتوى
-    <section id="home" className="relative pt-24 pb-16 md:pt-40 md:pb-32 px-6 max-w-7xl mx-auto text-center">
+    <section id="home" className="relative pt-26 pb-16 md:pt-40 md:pb-32 px-6 max-w-7xl mx-auto text-center">
       {/* الخلفية المضيئة - تصغير حجمها في الجوال */}
       <div className="absolute top-10 md:top-20 left-1/2 -translate-x-1/2 -z-10 w-full max-w-[300px] md:max-w-[600px] h-[300px] md:h-[400px] bg-accent/10 rounded-full blur-[80px] md:blur-[120px]"></div>
       
