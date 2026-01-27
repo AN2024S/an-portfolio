@@ -86,7 +86,7 @@ export const skillCategories = (lang) => [
   },
   { 
     title: lang === 'ar' ? "تطبيقات الموبايل" : "Mobile Apps", 
-    skills: ["React Native","Flutter"], 
+    skills: ["Flutter"], 
     icon: <Smartphone size={20}/> 
   },
   { 
