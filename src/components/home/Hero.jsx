@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+// --- الإضافة الأولى: استيراد وظيفة التتبع ---
+import { track } from '@vercel/analytics';
 
 const Hero = ({ darkMode, t, lang }) => {
   return (
@@ -51,6 +53,8 @@ const Hero = ({ darkMode, t, lang }) => {
           <a 
             href="/cv.pdf" 
             download 
+            // --- الإضافة الثانية: تتبع حدث التحميل عند الضغط على الزر ---
+            onClick={() => track('CV_Download', { language: lang })}
             className={`w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 flex items-center justify-center gap-3 font-bold rounded-xl md:rounded-2xl border-2 transition-all hover:bg-accent/10 active:scale-95 ${
               darkMode 
                 ? 'bg-white/5 border-accent text-white' 

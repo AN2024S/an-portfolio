@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { make3dTransformValue } from 'react-quick-pinch-zoom';
 
+// --- الإضافة الأولى: استيراد مكتبة التحليلات ---
+import { Analytics } from '@vercel/analytics/react';
+
 // استيراد المكونات التنظيمية (Layout)
 import CustomCursor from './components/layout/CustomCursor';
 import Navbar from './components/layout/Navbar';
@@ -98,7 +101,6 @@ const App = () => {
       <main>
         <Hero darkMode={darkMode} t={t.hero} lang={lang} />
         
-        {/* تم إضافة lang={lang} هنا لضمان عمل "عكس الأيقونات" في الكروت */}
         <ProjectsSection 
           darkMode={darkMode} 
           projectData={currentProjects} 
@@ -135,6 +137,9 @@ const App = () => {
         onClose={() => setSelectedImage(null)}
         setCurrentImageIndex={setCurrentImageIndex}
       />
+
+      {/* --- الإضافة الثانية: تفعيل مكون التحليلات قبل نهاية الـ div الرئيسي --- */}
+      <Analytics />
     </div>
   );
 };
